@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic.FileIO;
+
 namespace ScreenshotTinder {
     public partial class Form1 : Form {
         private int ImagesIndex = 1;
@@ -20,16 +22,19 @@ namespace ScreenshotTinder {
             while (fbd.ShowDialog() != DialogResult.OK)
                 ;
             SelectedPath = fbd.SelectedPath;
-            ImagesPath = Directory.GetFiles(SelectedPath, "*", SearchOption.TopDirectoryOnly);
+            ImagesPath = Directory.GetFiles(SelectedPath, "*", System.IO.SearchOption.TopDirectoryOnly);
+            Shuffle(ImagesPath);
             NextImage();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e) {
-            File.Delete(CurrentImage);
+        private void ButtonDelete_Click(object sender, EventArgs e) {
+            //File.Delete(CurrentImage);
+            if (CurrentImage != null)
+                Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile(CurrentImage, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin, UICancelOption.ThrowException);
             NextImage();
         }
 
-        private void btnKeep_Click(object sender, EventArgs e) {
+        private void ButtonKeep_Click(object sender, EventArgs e) {
             NextImage();
         }
 
@@ -45,6 +50,15 @@ namespace ScreenshotTinder {
 
         private void ShowImage(Image Image) {
             pbImage.Image = Image;
+        }
+
+        private static void Shuffle<T>(T[] array) {
+            Random Random = new();
+            int n = array.Length;
+            while (n > 1) {
+                int k = Random.Next(n--);
+                (array[k], array[n]) = (array[n], array[k]);
+            }
         }
     }
 }

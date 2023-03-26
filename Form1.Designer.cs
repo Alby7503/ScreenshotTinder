@@ -24,9 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             pbImage = new PictureBox();
-            btnDelete = new Button();
-            btnKeep = new Button();
-            btnBack = new Button();
+            ButtonDelete = new Button();
+            ButtonKeep = new Button();
+            ButtonBack = new Button();
             ((System.ComponentModel.ISupportInitialize) pbImage).BeginInit();
             SuspendLayout();
             // 
@@ -40,59 +40,59 @@
             pbImage.TabIndex = 0;
             pbImage.TabStop = false;
             // 
-            // btnDelete
+            // ButtonDelete
             // 
-            btnDelete.Anchor =  AnchorStyles.Bottom | AnchorStyles.Left;
-            btnDelete.AutoSize = true;
-            btnDelete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnDelete.Location = new Point(12, 604);
-            btnDelete.MaximumSize = new Size(1000, 50);
-            btnDelete.MinimumSize = new Size(480, 50);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(480, 50);
-            btnDelete.TabIndex = 1;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
+            ButtonDelete.Anchor =  AnchorStyles.Bottom | AnchorStyles.Left;
+            ButtonDelete.AutoSize = true;
+            ButtonDelete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ButtonDelete.Location = new Point(12, 604);
+            ButtonDelete.MaximumSize = new Size(1000, 50);
+            ButtonDelete.MinimumSize = new Size(480, 50);
+            ButtonDelete.Name = "ButtonDelete";
+            ButtonDelete.Size = new Size(480, 50);
+            ButtonDelete.TabIndex = 1;
+            ButtonDelete.Text = "Delete";
+            ButtonDelete.UseVisualStyleBackColor = true;
+            ButtonDelete.Click += ButtonDelete_Click;
             // 
-            // btnKeep
+            // ButtonKeep
             // 
-            btnKeep.Anchor =  AnchorStyles.Bottom | AnchorStyles.Right;
-            btnKeep.AutoSize = true;
-            btnKeep.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnKeep.Location = new Point(504, 604);
-            btnKeep.MaximumSize = new Size(1000, 50);
-            btnKeep.MinimumSize = new Size(480, 50);
-            btnKeep.Name = "btnKeep";
-            btnKeep.Size = new Size(480, 50);
-            btnKeep.TabIndex = 2;
-            btnKeep.Text = "Keep";
-            btnKeep.UseVisualStyleBackColor = true;
-            btnKeep.Click += btnKeep_Click;
+            ButtonKeep.Anchor =  AnchorStyles.Bottom | AnchorStyles.Right;
+            ButtonKeep.AutoSize = true;
+            ButtonKeep.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ButtonKeep.Location = new Point(504, 604);
+            ButtonKeep.MaximumSize = new Size(1000, 50);
+            ButtonKeep.MinimumSize = new Size(480, 50);
+            ButtonKeep.Name = "ButtonKeep";
+            ButtonKeep.Size = new Size(480, 50);
+            ButtonKeep.TabIndex = 2;
+            ButtonKeep.Text = "Keep";
+            ButtonKeep.UseVisualStyleBackColor = true;
+            ButtonKeep.Click += ButtonKeep_Click;
             // 
-            // btnBack
+            // ButtonBack
             // 
-            btnBack.Anchor =  AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnBack.AutoSize = true;
-            btnBack.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnBack.Cursor = Cursors.PanWest;
-            btnBack.Location = new Point(472, 573);
-            btnBack.MaximumSize = new Size(200, 50);
-            btnBack.MinimumSize = new Size(50, 25);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(50, 25);
-            btnBack.TabIndex = 3;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            ButtonBack.Anchor =  AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ButtonBack.AutoSize = true;
+            ButtonBack.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ButtonBack.Cursor = Cursors.PanWest;
+            ButtonBack.Location = new Point(472, 573);
+            ButtonBack.MaximumSize = new Size(200, 50);
+            ButtonBack.MinimumSize = new Size(50, 25);
+            ButtonBack.Name = "ButtonBack";
+            ButtonBack.Size = new Size(50, 25);
+            ButtonBack.TabIndex = 3;
+            ButtonBack.Text = "Back";
+            ButtonBack.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(996, 666);
-            Controls.Add(btnBack);
-            Controls.Add(btnKeep);
-            Controls.Add(btnDelete);
+            Controls.Add(ButtonBack);
+            Controls.Add(ButtonKeep);
+            Controls.Add(ButtonDelete);
             Controls.Add(pbImage);
             Name = "Form1";
             SizeGripStyle = SizeGripStyle.Show;
@@ -106,8 +106,8 @@
         #endregion
 
         private PictureBox pbImage;
-        private Button btnDelete;
-        private Button btnKeep;
-        private Button btnBack;
+        private Button ButtonDelete;
+        private Button ButtonKeep;
+        private Button ButtonBack;
     }
 }
